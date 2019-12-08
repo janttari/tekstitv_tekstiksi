@@ -1,0 +1,13 @@
+#!/bin/bash
+cd jpvtx-0.2.1
+make clean
+make
+mv jpvtx ../..
+cd ..
+
+cd vtx-emacs/vtx
+make clean
+make
+mv vtx2ascii ../../..
+cd ../..
+

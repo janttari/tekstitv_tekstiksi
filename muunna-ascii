@@ -1,0 +1,10 @@
+#!/bin/bash
+hakem="/tmp/vtx/1/txt"
+vtxfile=$1
+filename=$(basename -- "$vtxfile")
+extension="${filename##*.}"
+filename="${filename%.*}"
+./vtx2ascii $vtxfile >$hakem/$filename.txt
+sed -i 's/\xBC/ä/g;s/\x7C/ö/g;s/\x3C/Ä/g;s/\xBD/Ö/g;s/\x3E/Å/g;s/\xBE/å/g'  /$hakem/$filename.txt
+iconv -f utf-8 -t utf-8 -c $hakem/$filename.txt -o $hakem/$filename.txt
+

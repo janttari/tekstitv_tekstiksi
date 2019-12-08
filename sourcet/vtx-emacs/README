@@ -1,0 +1,24 @@
+This distribution contains three things: vbidecode, vtx2ascii and
+vtx.el.  I've written the latter; the two other things come from other
+distributions.
+
+vtx.el is an Emacs interface to teletext pages.  It starts vbidecode
+in the background, and uses vtx2ascii to do the translation from vtx
+format to human-readable format.
+
+You need to have xawtv properly installed for this to work, and you
+also need Emacs 20.3 or XEmacs 21 or better.  And this probably only
+works under Linux.
+
+To compile, just say "make" in the main directory.  Then add the
+following to your .emacs file:
+
+(require 'cl)
+(autoload 'vtx "vtx" nil t)
+(push "~/vtx-emacs/lisp" load-path)
+
+vtx-emacs is provided as is, in the hope that someone else (other than
+myself) will find it useful, but it's just something I hacked together
+one snowy night, and is not something that I maintain actively.
+
+Lars Magne Ingebrigtsen, Oslo, 1998-11-10

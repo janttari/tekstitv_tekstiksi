@@ -1,0 +1,23 @@
+This is for budget cards! Like wintv nova, or Skystar2.
+
+jpvtx passes stdin to stdout, so you can pipe data through it:
+
+Script to view BC-Prime encrypted:
+dvbstream -f 11131 -p v -s 5632 -o 8192 | jpvtx | jpcam -p 5001 | xine -
+In this example jpvtx reads ~/jpcam_pids to find teletext pids.
+
+The teletext is always in the clear BTW:
+dvbstream -f 11131 -p v -s 5632 -o 8192 | jpvtx 258 > /dev/zero 
+In this example  258 is the teletext pid.
+
+script to view VOX on 13 East:
+
+rm /video/vtx/1/*
+dvbstream -f 11054 -p h -s 27500 502 -o | jpvtx 502 | xine -
+
+now start the teletext viewer:
+xvtx-p
+
+
+
+

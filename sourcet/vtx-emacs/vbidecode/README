@@ -1,0 +1,62 @@
+vbidecode - VBI data decoder
+
+Copyright (C) 1997,98 Ralph Metzler  (rjkm@thp.uni-koeln.de)
+                      according to the GNU GPL in the file COPYING.
+
+
+Vbidecode decodes some of the data structures that are transmitted in the
+VBI (Vertical Blanking Interval) of television transmissions.
+As source it requires a TV decoder card driver which conforms to the 
+video4Linux interface standard and supports VBI data. 
+Not all video4linux drivers do provide this kind of data, depending on the
+capability of the hardware and the current state of the driver.
+Currently vbidecode also only supports the raw grabbing data as provided
+by the Bt848 family of frame grabber chips by Brooktree.
+
+
+Here is a list of some VBI data services:
+
+- videotext/teletext 
+  text based information pages (40x25 characters) 
+  PAL/SECAM-WST supported    
+  NTSC-NABTS not supported 
+
+- intercast
+  WWW pages transmitted via line 31 videotext in a kind of compressed SLIP format
+  PAL-WST supported
+  NTSC-NABTS not supported
+ 
+- VPS
+  channel information and signals for automatic start/stop of VCRs
+  mainly (only?) used in Europe
+  
+- closed captioned
+  mainly USA, Japan ... ?
+  (in Europe subtitles are ususally part of the videotext service)
+  not supported
+
+- Videocrypt 1 and 2
+  includes the cryptograms which are sent to smartcards in Videocrypt decoders
+  mainly used in the UK
+  not supported
+
+Since I am living in Germany I naturally cannot do any testing with NTSC
+signals. So, any help by people living in countries with NTSC TV and some
+programming experience would be appreciated.
+
+Also any documentation about data structures used in intercast transmissions
+(or any other kind of VBI services) would be helpful.
+Until now I had to figure out most of it myself by looking at the data stream.
+The references below give some hints, but e.g. the structures of the IP packages
+in the German intercast transmissions (on the channels ZDF and DSF) look 
+quite different and the format of the transmitted files is given nowhere.
+
+
+References:
+
+[1] R. Panabaker, THE TRANSMISSION OF IP OVER THE VERTICAL BLANKING INTERVAL OF A
+    TELEVISION SIGNAL, internet-draft
+
+[2] N. Thorne, THE TRANSMISSION OF IP OVER THE VERTICAL BLANKING INTERVAL OF A
+    PAL TELEVISION SIGNAL, internet-draft
+

@@ -1,0 +1,4 @@
+1998-11-13 20:58:35  Mark Burton  <markb@ordern.com>
+
+	* vtx.el (vtx-quit): New function.
+

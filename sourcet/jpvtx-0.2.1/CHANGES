@@ -1,0 +1,9 @@
+0.1:
+This is a first release
+
+0.2:
+jpvtx will now wait about 1 second (3000 packets) before reading ~/jpcam_pids.
+This should ensure, that when used via a pipe with jpcam, that the pids have
+been updated to the newly selected channel.
+In the case pids are specified on the command line there is no delay.
+
