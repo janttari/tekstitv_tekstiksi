@@ -10,3 +10,8 @@ kanava muodossa
 jossa ensiksi on enigma2-digiboksin url kyseiselle kanavalle ja sitä seuraa teksti-tv:n pid (jonka voi selvittää mediainfolla tai vlc:llä)
 
 Oletuksena skripti lukee lähetystä 60 sekuntia ja purkaa sitä samaan aikaan /tmp/vtx/1/txt hakemistoon luettavaan muotoon.
+
+Ohelman suoritus:
+ ./livetesti
+ 
+ 
