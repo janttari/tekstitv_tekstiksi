@@ -1,0 +1,12 @@
+#!/bin/bash
+# luo luodut sivut yhdeksi yksittäiseksi tekstitiedostoksi
+#
+echo "">_kaikki
+for i in /tmp/vtx/1/txt/*.txt
+do
+    echo --------------- $i ----------------------- >>_kaikki
+    cat $i >>_kaikki
+    echo "--------------------------------------------------">>_kaikki
+    echo "">>_kaikki
+done
+
