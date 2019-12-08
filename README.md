@@ -15,3 +15,7 @@ Ohelman suoritus:
 > ./livetesti
  
  
+
+Alkuperäiset koodit:
+http://panteltje.com/panteltje/satellite/
+https://quimby.gnus.org/elisp/elisp.html
