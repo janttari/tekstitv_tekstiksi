@@ -18,6 +18,6 @@ Ohelman suoritus:
 
 Alkuperäiset koodit:
 
-http://panteltje.com/panteltje/satellite/
+http://panteltje.com/panteltje/satellite/  (jpvtx)
 
-https://quimby.gnus.org/elisp/elisp.html
+https://quimby.gnus.org/elisp/elisp.html  (vtx2ascii paketista vtx-emacs)
