@@ -11,6 +11,13 @@ jossa ensiksi on enigma2-digiboksin url kyseiselle kanavalle ja sitä seuraa tek
 
 Oletuksena skripti lukee lähetystä 60 sekuntia ja purkaa sitä samaan aikaan /tmp/vtx/1/txt hakemistoon luettavaan muotoon.
 
+Kääntäminen:
+
+    cd sourcet
+    ./kaanna
+    cd ..
+    
+    
 Ohelman suoritus:
 > ./livetesti
  
